@@ -1,0 +1,113 @@
+%% start of file `template_en.tex'.
+%% Copyright 2007 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,letter]{moderncv}
+
+% moderncv themes
+\moderncvtheme[blue]{classic}
+%\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic}                % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+%\usepackage[scale=0.8]{geometry}
+%\recomputelengths                             % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Alan}
+\familyname{Wilson}
+\title{Experimental Physics (HEP)}               % optional, remove the line if not wanted
+\address{106 Burwood Ave \#2}{Ann Arbor, MI 48103}    % optional, remove the line if not wanted
+\mobile{(734) 239-3309}
+%\phone{phone (optional)}
+%\fax{fax (optional)}
+\email{aww@umich.edu}
+\extrainfo{http://cern.ch/wilsona}
+%\photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{Some quote (optional)}
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Education}
+\cventry{2010}{Ph.D. Physics}{Univserity of Michigan}{Ann Arbor}{}{}
+\cventry{2003}{M.S. Mathematics}{Univserity of Michigan}{Ann Arbor}{}{}
+\cventry{1999}{B.S. Mathematical Sciences (Physics)}{University of Washington}{Seattle}{}{}
+\cventry{1999}{B.S. Computer Engineering}{University of Washington}{Seattle}{}{}
+%\cventry{Year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 are optional
+
+\section{Ph.D. thesis}
+\cvline{title}{\emph{Search for a Supersymmetry Signature with the $Z\gamma$ plus Missing Transverse Energy Final State Using the D\O\ Detector}}
+\cvline{supervisor}{Prof. Bing Zhou}
+\cvline{description}{\small
+Over the last four years the D\O\ detector at Fermilab's Tevatron Collider has collected 
+$6.2$~fb$^{-1}$ of 1.96~TeV proton-antiproton collisions.
+Using this data I search for new physics producing a photon,
+a pair of electrons or muons from a $Z$ boson decay,
+and missing transverse energy produced by undetected particles.
+It is the first time that this signature has been searched for in a hadron collider experiment.
+Certain gauge mediated supersymmetry breaking (GMSB)
+theories would be observable via a few events of this type.
+I conclude that the observed data is constitent with the standard model prediction,
+no evidence for a supersymmetric signal is found.
+Employing multivariate selection techniques (boosted decision trees)
+and combining the analysis results from both electron and muon channels
+we exclude the GMSB model at 95\% confidence level for $70 < \Lambda < 117.5$~TeV,
+which corresponds to neutralino masses of
+$111 < \tilde{\chi}_1^0 < 222$~GeV (the next-to-lightest superparticle).
+}
+
+\section{Experience}
+\subsection{Research \& Hardware Experience}
+\cventry{2009--present}{Graduate Student Research Assistant}{D\O\ Experiment}{}{}{Thesis work looking at $Z\gamma$+missing $E_T$,\newline{}Collaborating on standard model $Z\gamma$ measurement (cross-sections and anomalous couplings),\newline{}Managing Monte Carlo production for the new phenomena group,\newline{}Control rooms shifts for data aquisition (DAQ).}
+\cventry{2005--2008}{Graduate Student Research Assistant}{ATLAS Experiment}{Univ. of Michigan}{}{Diboson physics analysis focusing on sensitivity to anomalous couplings with $WW$, $WZ$, and $ZZ$,\newline{}Construction of gas monitor chamber for MDTs,\newline{}Contributions to the $H\rightarrow WW$ analysis work,\newline{}Applying boosted decision trees to particle identification.}
+\cventry{2004--2005}{Research Assistant}{ATLAS Experiment}{Univ. of Michigan}{Geneva, Switzerland}{Commissioning ATLAS monitored drift tube (MDT) detectors (for muon precision measurement),\newline{}Validating muon reconstruction software}
+
+\subsection{Teaching}
+\cventry{1999--2003}{Graduate Student Instructor}{Mathematics}{University of Michigan}{Ann Arbor}{Courses: precalculus, calculus, and differential equations}
+\cventry{1998--1999}{Teaching Assistant}{Computer Science and Engineering}{Univ. of Washington}{Seattle}{Courses: Discrete Structures, Introduction to Computer Graphics, and Digital System Design}
+
+\section{Conference Talks and Publications}
+\cvline{talk}{\small ``$Z\rightarrow\mu\mu$ performance,'' ATLAS Physics Workshop, Rome, June 2005. }
+\cvline{talk}{\small ``Direct and Indirect Searches for New Physics with Diboson Final States ,'' LHC New Physics Signatures Workshop, University of Michigan, January 2008.}
+\cvline{publication}{\small ``Expected Performance of the ATLAS Experiment - Detector, Trigger and Physics.'' arXiv:0901.0512}
+\cvline{publication}{\small ``The ATLAS Experiment at the CERN Large Hadron Collider.'' \textit{JINST} 3 S08003 (2008)}
+\cvline{publication}{\small ``A Multivariate Training Technique with Event Reweighting.'' JINST3:P04004,2008 }
+\cvline{publication}{\small ``Drift time spectrum and gas monitoring in the ATLAS Muon Spectrometer precision chambers.'' Nucl.\ Instrum.\ Methods A \textbf{588}, 347 (2008).}
+\cvline{internal note}{\small ``Diboson physics studies with the ATLAS detector'' - Expanded version of ``Expected Performance....''}
+
+%\closesection{}                   % needed to renewcommands
+%\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem[+]{Item 3}            % optional other symbol
+
+%\section{Extra 2}
+%\cvlistdoubleitem[\Neutral]{Item 1}{Item 4}
+%\cvlistdoubleitem[\Neutral]{Item 2}{Item 5}
+%\cvlistdoubleitem[\Neutral]{Item 3}{}
+
+% Publications from a BibTeX file
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+\end{document}
+
+
+%% end of file `template_en.tex'.
