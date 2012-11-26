@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[10pt,letter]{moderncv}
+\documentclass[10pt,letter]{moderncv_new}
 
 % moderncv themes
 \moderncvtheme[blue]{classic}
@@ -35,11 +35,12 @@
 
 %\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
 
-
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
+%\renewcommand{\listitemsymbol}{+}
+
 \maketitle
 
 \section{Education}
@@ -55,16 +56,16 @@
 \cvline{description}{\small
 Over the last four years the D\O\ detector at Fermilab's Tevatron Collider has collected 
 $6.2$~fb$^{-1}$ of 1.96~TeV proton-antiproton collisions.
-Using this data I search for a supersymmetry signature: a high-$p_T$ photon,
+Using this data I searched for a supersymmetry signature: a high-$p_T$ photon,
 a pair of electrons or muons from a $Z$ boson decay,
 and large missing transverse energy produced by undetected particles.
 Certain gauge mediated supersymmetry breaking (GMSB)
 models would produce $Z\gamma$ events with large transverse missing energy,
 but this is the first time that this signature has been searched for in a hadron collider experiment.
 The dominate background is from standard model $Z\gamma$ production,
-these events are used as a control sample for data-Monte Carlo consistency checks.
-Background estimates are accomplished using data-driven methods and Monte Carlo simulations.
-The observed data is constitent with standard model predictions.
+these events are used as a control sample for data-Monte Carlo (MC) consistency checks.
+Background estimates are accomplished using data-driven methods and MC simulations.
+The observed data is consistent with standard model predictions.
 No evidence for a supersymmetric signal is found.
 Using the extra signal discrimination obtained with boosted decision trees (a trained multivariate selection technique)
 and combining the analysis results from both electron and muon channels
@@ -75,12 +76,36 @@ $111 < \tilde{\chi}_1^0 < 222$~GeV.
 
 \section{Experience}
 \subsection{Research \& Hardware Experience}
-\cventry{2009--present}{Graduate Student Research Assistant}{D\O\ Experiment}{}{}{Search for supersymmetry with the $Z\gamma$+missing $E_T$ signature,\newline{}Collaborating on standard model $Z\gamma$ measurement (cross-sections and anomalous couplings),\newline{}Managing Monte Carlo production for the new phenomena group,\newline{}Control rooms shifts for data aquisition (DAQ).}
-\cventry{2005--2008}{Graduate Student Research Assistant}{ATLAS Experiment}{Univ. of Michigan}{}{Primary author of diboson physics analysis preparing for a cross-section measurement and assessing the sensitivity to anomalous couplings with $WW$, $WZ$, and $ZZ$,\newline{} \textit{-- contributed the entire $WZ$ analysis and substantial portions of $WW$ and $ZZ$, comparing MC@NLO and BosoMC for systematics and modeling of anomalous couplings, developed the software tools for computing likelihood distributions and confidence intervals}\newline{}Construction of gas monitor chamber for the monitored drift tube (MDT) system,\newline{} \textit{-- working with an engineer and an undergraduate assembled a complete table-top drift chamber from scratch including scintillator triggers and gas system}\newline{}Contributions to the $H\rightarrow WW$ analysis work,\newline{}Applying boosted decision trees to electron identification and b-tagging.\newline{} \textit{-- testing of algorithm and integration into ATLAS software}}
-\cventry{2004--2005}{Research Assistant}{ATLAS Experiment}{Univ. of Michigan}{Geneva, Switzerland}{Phase 1 commissioning of MDT detectors (for muon precision measurement),\newline{} \textit{-- setup lab space from scratch including training to operate cranes, supervising chamber movements, and becoming expert in the gas distribution system; supervised a group of six undergraduates completing chamber construction, leak checking, running tests with cosmic ray signals, and accomplising many repairs}\newline{}Validating muon reconstruction software}\newline{} \textit{-- testing and comparing muon reconstruction algorithms for resolution and efficiency in Monte Carlo}
-\cventry{1994--1999}{Research Assistant}{Space Sciences, Geophysics}{Univ. of Washington}{Seattle}{
-  designed and assembled DAQ hardware for balloon and satellite experiment commissioning,\newline{}developed software for commissioning of a satellite experiment,\newline{}research and simulations exploring coded apperture imaging using X-rays.}
-
+\cventry{2009--present}{Graduate Student Research Assistant}{D\O\ Experiment}{}{}{}
+\cvlistitem{Searched for supersymmetry with the $Z\gamma$+missing $E_T$ signature.}
+\cvlistitem{Collaborating on standard model $Z\gamma$ cross section and anomalous couplings.}
+\cvlistitem{Managing Monte Carlo production for the new phenomena group.}
+\cvlistitem{Control rooms shifts for data acquisition (DAQ).}
+\cventry{2005--2008}{Graduate Student Research Assistant}{ATLAS Experiment}{}{}{}
+\cvlistitem{Primary contributor to diboson physics: prepared for cross-section measurement and estimated sensitivity to anomalous couplings.}
+\cvsublistitem{Contributed entire $WZ$ analysis and substantial portions of $WW$ and $ZZ$.}
+\cvsublistitem{Worked with MC@NLO and BosoMC for event generation, cross-section systematics, and modeling of anomalous couplings.}
+\cvsublistitem{Developed calculation of the confidence region for couplings.}
+\cvlistitem{Constructed the gas monitor chamber for the monitored drift tube (MDT) system:}
+\cvsublistitem{Working with an engineer and an undergraduate,
+  assembled a complete table-top (6 layers of 16 tubes)
+  drift tube detector from scratch including scintillator triggers and gas system.}
+\cvsublistitem{Used to monitor the gas mixture flowing in and out of the ATLAS MDT system
+  via features of the drift-time spectra from cosmic ray muon tracks.}
+\cvlistitem{Contributions to the $H\rightarrow WW$ analysis work.}
+\cvlistitem{Applying boosted decision trees to electron identification and b-tagging.}
+\cvsublistitem{Testing of algorithm and integration into ATLAS software.}
+\cventry{2004--2005}{Research Assistant}{ATLAS Experiment}{Univ. of Michigan}{Geneva, Switzerland}{}
+\cvlistitem{Phase 1 commissioning of MDT detectors (for the muon precision measurement).}
+\cvsublistitem{Setup lab space from scratch: trained to operate cranes,
+  supervised chamber movements, expert in the gas mixing and distribution system}
+\cvsublistitem{Lead a team of undergraduates (as many of as five) finishing chamber assembly,
+  leak checking, commissioning with cosmic rays, and working out repairs on the fly}
+\cvlistitem{Validating muon reconstruction software}
+\cvsublistitem{Compared muon reconstruction algorithms for resolution and efficiency in MC}
+\cventry{1994--1999}{Research Assistant}{Space Sciences, Geophysics}{Univ. of Washington}{Seattle}{}
+\cvlistitem{Assembled DAQ hardware and developed software for balloon and satellite experiment commissioning.}
+\cvlistitem{Research and simulations exploring coded aperture imaging using X-rays.}
 
 \subsection{Teaching}
 \cventry{1999--2003}{Graduate Student Instructor}{Mathematics}{University of Michigan}{Ann Arbor}{Courses: precalculus, calculus, and differential equations}
@@ -88,27 +113,23 @@ $111 < \tilde{\chi}_1^0 < 222$~GeV.
 
 \section{Conference Talks and Publications}
 \cvline{D0 note}{\small ``Search for supersymmetry with the $Z\gamma$ plus missing transverse energy signature'', in preparation}
-
 \cvline{publication}{\small ``The ATLAS Experiment at the CERN Large Hadron Collider.'' \textit{JINST} 3 S08003 (2008)}
 \cvline{publication}{\small ``Expected Performance of the ATLAS Experiment - Detector, Trigger and Physics.'' CERN-OPEN-2008-020 (2009), arXiv:0901.0512}
-\cvline{ATLAS note}{\small ``Diboson physics studies with the ATLAS detector'', ATL-PHYS-PUB-2009-038 - Expanded version of ``Expected Performance....''}
+\cvline{ATLAS note}{\small ``Diboson physics studies with the ATLAS detector'', ATL-PHYS-PUB-2009-038\newline{}\textit{Expanded version of ``Expected Performance....''}}
 \cvline{proceedings}{\small ``Diboson Physics in ATLAS'', ATL-PHYS-PROC-2008-051}
 \cvline{talk}{\small ``Direct and Indirect Searches for New Physics with Diboson Final States ,'' LHC New Physics Signatures Workshop, University of Michigan, January 2008.}
-
 \cvline{publication}{\small ``Drift time spectrum and gas monitoring in the ATLAS Muon Spectrometer precision chambers.'' Nucl.\ Instrum.\ Methods A \textbf{588}, 347 (2008).}
-\cvline{proceedings}{\small ``Streamlined Calibration of the ATLAS Muon Spectrometer Precision Chambers'', D.S. Levin for the ATLAS Collaboration, Nuclear Science Symposium Conference Record (NSS/MIC), 2009 IEEE, Oct. 24 2009-Nov. 1 2009, 1040--1044}
+\cvline{proceedings}{\small ``Streamlined Calibration of the ATLAS Muon Spectrometer Precision Chambers'', D. Levin for the ATLAS Collaboration, Nuclear Science Symposium Conf. Record, 2009 IEEE, 1040--1044}
 \cvline{proceedings}{\small ``Gas performance of the ATLAS MDT precision chambers'', Nuclear Science Symposium Conference Record, 2008. NSS '08. IEEE, 19-25 Oct. 2008, 3213}
-
 \cvline{publication}{\small ``A Multivariate Training Technique with Event Reweighting.'' The ATLAS Collaboration, JINST3:P04004,2008 }
 \cvline{ATLAS note}{\small ``B-tagging Based on Boosted Decision Trees and Performance Comparisons of ATLAS B-taggers'', ATL-PHYS-INT-2009-072}
 \cvline{ATLAS note}{\small ``Performance of Electron Identification Based on Boosted Decision Trees'', ATL-COM-PHYS-2009-160}
 \cvline{ATLAS note}{\small ``Study of the SM Higgs Discovery Potential through W-pair Leptonic Decay Modes with Boosted Decision Trees'', ATL-PHYS-INT-2009-052}
-
 \cvline{talk}{\small ``$Z\rightarrow\mu\mu$ performance'', ATLAS Physics Workshop, Rome, June 2005. }
-
+\subsection{ATLAS general}
 \cvline{publication}{\small ``Charged-particle multiplicities in $pp$ interactions at $\sqrt{s}=900$~GeV measured with the ATLAS detector at the LHC'', ATLAS Collaboration, Phys. Lett. B 688, issue 1, 21 (2010).}
 \cvline{publication}{\small ``Search for New Particles in Two-jet Final States in 7 TeV Proton-Proton Collisions with the ATLAS Detector at the LHC'', ATLAS Collaboration, Phys. Ref. Lett. 105, 161801 (2010)}
-\cvline{publication}{\small ``Measurement of the $W\rightarrow l\nu$ and $Z/\gamma^* \rightarrow \ell\ell$ production cross sections in proton-proton collisions at $\sqrt{s}=7$~TeV with the ATLAS Detector'', ATLAS Collaboration, accepated by JHEP (2010).}
+\cvline{publication}{\small ``Measurement of the $W\rightarrow l\nu$ and $Z/\gamma^* \rightarrow \ell\ell$ production cross sections in proton-proton collisions at $\sqrt{s}=7$~TeV with the ATLAS Detector'', ATLAS Collaboration, accepted by JHEP (2010).}
 \cvline{publication}{\small ``Observation of a centrality-dependent dijet asymmetry in lead-lead collisions at $\sqrt{s_{NN}}=2.76$~TeV with the ATLAS detector at the LHC'', ATLAS Collaboration, Phys. Ref. Lett. 105, 252303 (2010).}
 
 
