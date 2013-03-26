@@ -1,164 +1,158 @@
-%% start of file `template_en.tex'.
-%% Copyright 2007 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
+\documentclass[11pt,letterpaper,sans]{moderncv}
 
+\moderncvtheme{classic}
+\moderncvcolor{blue}
 
-\documentclass[10pt,letter]{moderncv_new}
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.88]{geometry}
 
-% moderncv themes
-\moderncvtheme[blue]{classic}
-%\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-%\moderncvtheme[green]{classic}                % idem
-
-% character encoding
-\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
-
-% adjust the page margins
-%\usepackage[scale=0.8]{geometry}
-%\recomputelengths                             % required when changes are made to page layout lengths
-
-% personal data
 \firstname{Alan}
 \familyname{WILSON}
-\title{High Energy Experimental Physics}               % optional, remove the line if not wanted
-\address{310 Rue des Hautains de la Crotte}{01210 Ornex, FRANCE}    % optional, remove the line if not wanted
-\mobile{+1 (734) 239-3309}
-%\phone{phone (optional)}
-%\fax{fax (optional)}
-\email{aww@umich.edu}
-\extrainfo{http://cern.ch/wilsona}
-%\photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
-%\quote{Some quote (optional)}
+\title{Ph.D., experimental high energy physics}
+\address{310 Rue des Hautains de la Crotte}{01210 Ornex}{France}
+\mobile{+41 76 487 4147}
+\phone{+1 734 239-3309}
+\email{alan.w.wilson@gmail.com}
+\homepage{http://cern.ch/wilsona}
 
-%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%\nopagenumbers{}
 
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
 \begin{document}
 %\renewcommand{\listitemsymbol}{+}
 
-\maketitle
+\makecvtitle
+
+\section{The basics}
+\cvitem{}{As a physicist and a curious human,
+  everyday I collaborate with colleagues to identify and understand structure in data
+  and communicate our findings widely.}
 
 \section{Education}
 \cventry{2011}{Ph.D. Physics}{University of Michigan}{Ann Arbor}{}{}
 \cventry{2003}{M.S. Mathematics}{University of Michigan}{Ann Arbor}{}{}
-\cventry{1999}{B.S. Mathematical Sciences (Physics)}{University of Washington}{Seattle}{}{}
-\cventry{1999}{B.S.E. Computer Engineering}{University of Washington}{Seattle}{}{}
-%\cventry{Year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 are optional
+\cventry{1999}{B.S. Mathematical Sciences}{University of Washington}{Seattle}{}{}
+\cventry{1999}{B.S. Computer Engineering}{University of Washington}{Seattle}{}{}
 
-\section{Ph.D. thesis}
-\cvline{title}{\emph{Search for a Supersymmetry Signature with the $Z\gamma$ plus Missing Transverse Energy Final State Using the D\O\ Detector}}
-\cvline{supervisor}{Prof. Bing Zhou}
-\cvline{description}{\small
-Over four years the D\O\ detector at Fermilab's Tevatron Collider collected 
-$6.2$~fb$^{-1}$ of 1.96~TeV proton-antiproton collisions.
-Using this data I searched for a signature of certain gauge mediated supersymmetry breaking (GMSB) models:
-a high-$p_T$ photon,
-a pair of electrons or muons from a $Z$ boson decay,
-and large missing transverse energy produced by undetected particles.
-This was the first search of it's kind.
-The dominate background is from standard model $Z\gamma$ production,
-and these events were used as a control sample for data-Monte Carlo (MC) consistency checks.
-Background estimates were accomplished using data-driven methods and MC simulations.
-I obtained extra signal discrimination using boosted decision trees (a trained multivariate selection technique)
-and combined the analysis results from both electron and muon channels.
-The observed data are consistent with standard model predictions.
-No evidence for a supersymmetric signal is found.
-{\em Published as PRD 86, 071701.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Proficiencies \& technical interests}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{cvcolumns}{programming}
+  \cvcolumn{Almost every day}{
+    \begin{itemize}
+    \item C++
+    \item Python
+    \item ROOT+RooStats+TMVA
+    \item numpy+scipy+matplotlib
+  \end{itemize}
+  }
+  \cvcolumn{Occasionally}{
+    \begin{itemize}
+    \item SQL variants
+    \item Mathematica and Matlab
+    \item shell scripting
+    \item C \& ASM for $\mu$-controllers
+    \end{itemize}
+  }
+  \cvcolumn{Fading memories}{
+    \begin{itemize}
+    \item Javascript
+    \item Lisp dialects
+    \item PHP
+    \item Perl
+    \end{itemize}
+  }
+\end{cvcolumns}
+
+\cvitemwithcomment{command line}{git/svn, tmux/screen, emacs, ssh/rsync, etc.}{the usual Linux stuff}
+\cvitemwithcomment{statistics}{fitting, statistical tests, likelihoods, Bayesian vs. frequentists}{quantifying with limited knowledge}
+\cvitemwithcomment{machine learning}{supervised learning, boosted decision trees}{co-authored paper: training BDTs with weighted events}
+\cvitemwithcomment{publishing}{\LaTeX+beamer, HTML/CSS, Photoshop/Illustrator/Gimp/Inkscape}{things should look nice}
+\cvitemwithcomment{extra topics}{(social) network structure, coding theory, and compression}{graduate course projects}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research \& Hardware Experience}
+\cventry{2011--present}{Post Doctoral Research Fellow}{ATLAS Experiment}{CERN}{Geneva, Switzerland}{
+  As part of the largest experiment in the world, I contributed to
+  the Higgs discovery (specifically, via $H\rightarrow ZZ \rightarrow 4\ell$) and
+  to measurements involving multiple leptons, including the rare decay $Z\rightarrow 4\ell$.
+  \begin{itemize}
+  \item Wrote readable, modular, and accurate analysis code to run in batch (Condor) and on the Grid
+  %\item Mentored graduate students
+  \item Developed many tools for efficiently specifying, building, and sharing plots
+  \item Primary editor for at least one paper as well as internal documents
+  \item Developed a framework for defining ``unit tests'' of numerical quantities in documents
+  \item Constructed event visualizations in various forms
+  \item Tested new detectors as part of a hardware installation team
+  \item Controlled experiment-wide data acquisition when on shift, reacting quickly but thoughtfully to solve faults.
+  \end{itemize}
+}
+\cventry{2009--2010}{Graduate Student Research Assistant}{D\O\ Experiment}{}{Batavia, Illinois}{
+  \begin{itemize}
+  \item Thesis topic: a search for new physics via the $Z(\rightarrow\ell\ell) \gamma$+missing $E_T$ final state.
+    This is a niche topic, so I had the entire analysis largely to myself including
+    \begin{itemize}
+    \item exploring the theory and experimental sensitivity with simulation,
+    \item estimating backgrounds with data-driven methods, and
+    \item using statistics to quantify constraints on theory imposed by the observation.
+    \end{itemize}
+  \item Expert role managing Monte Carlo simulation jobs: responding to my colleagues requests
+    and translating them into tested job specifications, submitting the jobs, and monitoring the results. 
+  \item DAQ shifts: online control, monitoring, and problem solving for the data taking of a large experiment
+  \end{itemize}
+}
+\cventry{2005--2008}{Graduate Student Research Assistant}{ATLAS Experiment}{Univ. of Michigan}{Ann Arbor}{
+  \begin{itemize}
+  \item Primary contributor to large preparatory documents on (diboson) physics sensitivity before data was available.
+  \item Wrote machinery for calculating confidence regions for coupling measurements.
+  \item Working in a small team with an engineer and undergraduate I constructed
+    the gas monitor chamber for the muon tracking system of ATLAS.
+  \item Applied boosted decision trees to particle identification tasks (electron id. and b-tagging)
+    becoming a local expert on the ATLAS software framework
+  \end{itemize}
+}
+\cventry{2004--2005}{Research Assistant}{ATLAS Experiment}{Univ. of Michigan}{Geneva, Switzerland}{
+  \begin{itemize}
+  \item Validated muon reconstruction software, presented systematic comparison of algorithms, and identified faults
+  \item Commissioning of 40 large muon detectors, involving
+    \begin{itemize}
+    \item leading a team of five undergraduates to complete assembly and testing,
+      % leak checking, commissioning with cosmic rays, and working out repairs on the fly
+    \item managing logistics of the lab space when our supervisor was away, and
+    \item training to operate cranes and becoming an expert in the gas mixing and distribution system.
+    \end{itemize}
+  \end{itemize}
+}
+\cventry{1994--1999}{Research Assistant}{Space Sciences, Geophysics}{Univ. of Washington}{Seattle}{
+  \begin{itemize}
+  \item{Built testing platforms for DAQ hardware and software used on balloon and satellite experiments.}
+  \item{Literature summaries and simulations of coded aperture imaging using X-rays.}
+  \end{itemize}
 }
 
-\section{Experience}
-\subsection{Research \& Hardware Experience}
-\cventry{2011--present}{Post Doctoral Research Fellow}{ATLAS Experiment}{}{}{}
-\cvlistitem{Physics analyses involving four lepton:}
-\cvsublistitem{Higgs discovery via $H\rightarrow ZZ \rightarrow 4\ell$, measurements of $pp \rightarrow ZZ\rightarrow 4\ell$ and $Z\rightarrow 4\ell$.}
-\cvsublistitem{Background estimates, study individual events via event displays, analysis code development}
-\cvlistitem{Installation of new muon detectors (MDT EE-): primarily testing and debugging from the muon control desk.}
-\cvlistitem{Controlling ATLAS-wide data acquisition (DAQ) and ensuring high-quality data flows smoothly from all detectors to disk during substantial ``run control'' shifts.}
-\cventry{2009--2010}{Graduate Student Research Assistant}{D\O\ Experiment}{}{}{}
-\cvlistitem{Searched for supersymmetry with the $Z\gamma$+missing $E_T$ signature.}
-\cvlistitem{Collaborating on standard model $Z\gamma$ cross section and anomalous couplings.}
-\cvlistitem{Managing Monte Carlo production for the new phenomena group.}
-\cvlistitem{Control rooms shifts for DAQ.}
-\cventry{2005--2008}{Graduate Student Research Assistant}{Atlas Experiment}{}{}{}
-\cvlistitem{Primary contributor to diboson physics: prepared for cross-section measurement and estimated sensitivity to anomalous couplings.}
-\cvsublistitem{Contributed entire $WZ$ analysis and substantial portions of $WW$ and $ZZ$.}
-\cvsublistitem{Worked with MC@NLO and BosoMC for event generation, cross-section systematics, and modeling of anomalous couplings.}
-\cvsublistitem{Developed calculation of the confidence region for couplings.}
-\cvlistitem{Constructed the gas monitor chamber for the monitored drift tube (MDT) system:}
-\cvsublistitem{Working with an engineer and an undergraduate,
-  assembled a complete table-top (6 layers of 16 tubes)
-  drift tube detector from scratch including scintillator triggers and gas system.}
-\cvsublistitem{Used to monitor the gas mixture flowing in and out of the ATLAS MDT system
-  via features of the drift-time spectra from cosmic ray muon tracks.}
-\cvlistitem{Contributions to the $H\rightarrow WW$ analysis work.}
-\cvlistitem{Applying boosted decision trees to electron identification and b-tagging.}
-\cvsublistitem{Testing of algorithm and integration into ATLAS software.}
-\cventry{2004--2005}{Research Assistant}{ATLAS Experiment}{Univ. of Michigan}{Geneva, Switzerland}{}
-\cvlistitem{Phase 1 commissioning of MDT detectors (for the muon precision measurement).}
-\cvsublistitem{Setup lab space from scratch: trained to operate cranes,
-  supervised chamber movements, expert in the gas mixing and distribution system}
-\cvsublistitem{Lead a team of undergraduates (as many of as five) finishing chamber assembly,
-  leak checking, commissioning with cosmic rays, and working out repairs on the fly}
-\cvlistitem{Validating muon reconstruction software}
-\cvsublistitem{Compared muon reconstruction algorithms for resolution and efficiency in MC}
-\cventry{1994--1999}{Research Assistant}{Space Sciences, Geophysics}{Univ. of Washington}{Seattle}{}
-\cvlistitem{Developed DAQ hardware and software for balloon and satellite experiments.}
-\cvlistitem{Research and simulations exploring coded aperture imaging using X-rays.}
-
-\subsection{Teaching}
+\section{Teaching}
 \cventry{1999--2003}{Graduate Student Instructor}{Mathematics}{University of Michigan}{Ann Arbor}{Courses: precalculus, calculus I \& II, and differential equations}
 \cventry{1998--1999}{Teaching Assistant}{Computer Science and Engineering}{Univ. of Washington}{Seattle}{Courses: Discrete Structures, Introduction to Computer Graphics, and Digital System Design}
 
-\section{Publications and Talks}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \cvline{paper}{\small ``Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC'', Phys. Lett. B 716 (2012) 1-29}
 \cvline{paper}{\small ``Search for $Z\gamma$ events with large missing transverse energy in $p\bar{p}$ collisions at $\sqrt{s}=1.96$~TeV'', Phys. Rev. D 86, 071701(R) (2012)}
 \cvline{publication}{\small ``The ATLAS Experiment at the CERN Large Hadron Collider.'' \textit{JINST} 3 S08003 (2008)}
 \cvline{publication}{\small ``Expected Performance of the ATLAS Experiment - Detector, Trigger and Physics.'' CERN-OPEN-2008-020 (2009), arXiv:0901.0512}
-\cvline{ATLAS note}{\small ``Diboson physics studies with the ATLAS detector'', ATL-PHYS-PUB-2009-038\newline{}\textit{Expanded version of ``Expected Performance....''}}
-\cvline{proceedings}{\small ``Diboson Physics in ATLAS'', ATL-PHYS-PROC-2008-051}
-\cvline{talk}{\small ``Direct and Indirect Searches for New Physics with Diboson Final States ,'' LHC New Physics Signatures Workshop, University of Michigan, January 2008.}
-\cvline{publication}{\small ``Drift time spectrum and gas monitoring in the ATLAS Muon Spectrometer precision chambers.'' Nucl.\ Instrum.\ Methods A \textbf{588}, 347 (2008).}
-\cvline{proceedings}{\small ``Streamlined Calibration of the ATLAS Muon Spectrometer Precision Chambers'', D. Levin for the ATLAS Collaboration, Nuclear Science Symposium Conf. Record, 2009 IEEE, 1040--1044}
-\cvline{proceedings}{\small ``Gas performance of the ATLAS MDT precision chambers'', Nuclear Science Symposium Conference Record, 2008. NSS '08. IEEE, 19-25 Oct. 2008, 3213}
-\cvline{publication}{\small ``A Multivariate Training Technique with Event Reweighting.'' The ATLAS Collaboration, JINST3:P04004,2008 }
-\cvline{ATLAS note}{\small ``B-tagging Based on Boosted Decision Trees and Performance Comparisons of ATLAS B-taggers'', ATL-PHYS-INT-2009-072}
-\cvline{ATLAS note}{\small ``Performance of Electron Identification Based on Boosted Decision Trees'', ATL-COM-PHYS-2009-160}
-\cvline{ATLAS note}{\small ``Study of the SM Higgs Discovery Potential through W-pair Leptonic Decay Modes with Boosted Decision Trees'', ATL-PHYS-INT-2009-052}
-\cvline{talk}{\small ``$Z\rightarrow\mu\mu$ performance'', ATLAS Physics Workshop, Rome, June 2005. }
-%% \subsection{ATLAS general}
-%% \cvline{publication}{\small ``Charged-particle multiplicities in $pp$ interactions at $\sqrt{s}=900$~GeV measured with the ATLAS detector at the LHC'', ATLAS Collaboration, Phys. Lett. B 688, issue 1, 21 (2010).}
-%% \cvline{publication}{\small ``Search for New Particles in Two-jet Final States in 7 TeV Proton-Proton Collisions with the ATLAS Detector at the LHC'', ATLAS Collaboration, Phys. Ref. Lett. 105, 161801 (2010)}
-%% \cvline{publication}{\small ``Measurement of the $W\rightarrow l\nu$ and $Z/\gamma^* \rightarrow \ell\ell$ production cross sections in proton-proton collisions at $\sqrt{s}=7$~TeV with the ATLAS Detector'', ATLAS Collaboration, accepted by JHEP (2010).}
-%% \cvline{publication}{\small ``Observation of a centrality-dependent dijet asymmetry in lead-lead collisions at $\sqrt{s_{NN}}=2.76$~TeV with the ATLAS detector at the LHC'', ATLAS Collaboration, Phys. Ref. Lett. 105, 252303 (2010).}
+\cvline{paper}{\small ``Drift time spectrum and gas monitoring in the ATLAS Muon Spectrometer precision chambers.'' Nucl.\ Instrum.\ Methods A \textbf{588}, 347 (2008).}
+\cvline{paper}{\small ``A Multivariate Training Technique with Event Reweighting.'' H.-J. Yang, T. Dai, A. Wilson, Z. Zhao and B. Zhou, \href{http://dx.doi.org/10.1088/1748-0221/3/04/P04004}{JINST 3:P04004,2008} }
 
+\section{Other interests}
 
-
-
-%\closesection{}                   % needed to renewcommands
-%\renewcommand{\listitemsymbol}{-} % change the symbol for lists
-
-%\section{Extra 1}
-%\cvlistitem{Item 1}
-%\cvlistitem{Item 2}
-%\cvlistitem[+]{Item 3}            % optional other symbol
-
-%\section{Extra 2}
-%\cvlistdoubleitem[\Neutral]{Item 1}{Item 4}
-%\cvlistdoubleitem[\Neutral]{Item 2}{Item 5}
-%\cvlistdoubleitem[\Neutral]{Item 3}{}
-
-% Publications from a BibTeX file
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{publications}       % 'publications' is the name of a BibTeX file
-
+\cvitem{hobbies}{electronics and photography -- small analog and microcontroller projects, darkroom work}
+\cvitem{culture}{cooking, travel, hiking, and wandering -- seeing, smelling, touching, and tasting the world}
 
 \end{document}
-
-
-%% end of file `template_en.tex'.
