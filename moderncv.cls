@@ -430,8 +430,9 @@
 \newlength{\cvcolumnsautowidth}% total width of columns with no explicit width provided
 \newlength{\cvcolumnautowidth}% width of one of the columns with no explicit width provided (based on equal distribution of remaining space)
 \newif\if@cvcolumns@head@empty% whether or not at least one of the columns has a header
-\newenvironment*{cvcolumns}%
+\newenvironment*{cvcolumns}[1]%
   {% at environment opening: reset counters, lengths and ifs
+    \newcommand\hinttext{#1}
     \setcounter{cvcolumnscounter}{0}%
     \setcounter{cvcolumnsautowidthcounter}{0}%
     \setlength{\cvcolumnsautowidth}{\cvcolumnsdummywidth}%
@@ -474,7 +475,7 @@
 %      \stepcounter{tmpiteratorcounter}%
 %      \repeat%
     % create the tabular
-    \cvitem{}{%
+    \cvitem{\hinttext}{%
       \begin{tabular}{\cvcolumns@def}%
         \if@cvcolumns@head@empty\else%
           \cvcolumns@head\\[-.8em]%
