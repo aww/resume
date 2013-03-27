@@ -4,7 +4,11 @@
 \moderncvcolor{blue}
 
 \usepackage[utf8]{inputenc}
-\usepackage[scale=0.88]{geometry}
+\usepackage[scale=0.87]{geometry}
+
+% For some reason the {\color{color1} #1} version of this
+% leads to space before a list that starts with \hilight
+\newcommand{\hilight}[1]{\textcolor{color1}{\itshape#1}}
 
 \firstname{Alan}
 \familyname{WILSON}
@@ -81,57 +85,57 @@
   the Higgs discovery (specifically, via $H\rightarrow ZZ \rightarrow 4\ell$) and
   to measurements involving multiple leptons, including the rare decay $Z\rightarrow 4\ell$.
   \begin{itemize}
-  \item Wrote readable, modular, and accurate code to run in batch (Condor) and on the Grid
-    to analyze large amounts of data
+  \item \hilight{Wrote readable, modular, and accurate code} to run in batch (Condor) and on the Grid
+    to analyze \hilight{large amounts of data}
   %\item Mentored graduate students
-  \item Developed many tools for efficiently specifying, building, and sharing plots
-  \item Primary editor for at least one paper as well as internal documents
-  \item Developed a framework for defining unit tests of numerical quantities in \LaTeX{} documents
+  \item Developed many \hilight{tools for efficiently specifying, building, and sharing plots}
+  \item \hilight{Primary editor} for at least one paper as well as internal documents
+  \item Developed a \hilight{framework for defining unit tests} of numerical quantities in \LaTeX{} documents
   \item Constructed event visualizations in various forms
   \item Tested new detectors as part of a hardware installation team
-  \item Controlled experiment-wide data acquisition, reacting quickly but thoughtfully to solve faults.
+  \item \hilight{Controlled experiment-wide data acquisition}, reacting quickly but thoughtfully to solve faults.
   \end{itemize}
 }
 \cventry{2009--2010}{Graduate Student Research Assistant}{D\O\ Experiment}{}{Batavia, Illinois}{
   \begin{itemize}
   \item \textcolor{color1}{Thesis topic}: a search for new physics via the $Z(\rightarrow\ell\ell) \gamma$+missing $E_T$ final state.\\
-    This is a niche topic allowing me to contribute to nearly the complete analysis, including
+    This is a niche topic allowing me to contribute to nearly the \hilight{complete analysis}, including
     \begin{itemize}
     \item exploring the theory and experimental sensitivity with simulation,
     \item rejecting backgrounds with BDTs and estimating with data-driven methods, and
     \item using statistics to quantify constraints on theory imposed by the observation.
     \end{itemize}
-  \item Expert role managing Monte Carlo simulation jobs: responding to my colleagues' requests
+  \item \hilight{Expert role managing Monte Carlo simulation jobs}: responding to my colleagues' requests
     and translating them into tested job specifications, submitting the jobs, and monitoring the results. 
   \item DAQ shifts: online control, monitoring, and problem solving for the data taking of a large experiment
   \end{itemize}
 }
 \cventry{2005--2008}{Graduate Student Research Assistant}{ATLAS Experiment}{Univ. of Michigan}{Ann Arbor}{
   \begin{itemize}
-  \item Primary contributor to large public documents on diboson physics sensitivity before data was available.
-  \item Implemented tools for calculating confidence regions via marginalized likelihoods.
+  \item \hilight{Primary contributor to large public documents} on diboson physics sensitivity before data was available.
+  \item Implemented tools for calculating confidence regions via \hilight{marginalized likelihoods}.
   \item Collaborating with an engineer and supervising a student,
-    constructed the gas monitor chamber for the muon tracking system of ATLAS.
-  \item Applied boosted decision trees to particle identification tasks (electron id. and b-tagging),
+    \hilight{constructed the gas monitor chamber} for the muon tracking system of ATLAS.
+  \item Applied \hilight{boosted decision trees} to particle identification tasks (electron id. and b-tagging),
     becoming a local expert on the ATLAS software framework
   \end{itemize}
 }
 \cventry{2004--2005}{Research Assistant}{ATLAS Experiment}{Univ. of Michigan}{Geneva, Switzerland}{
   \begin{itemize}
-  \item Validated muon reconstruction software with systematic comparisons, uncovering faults
+  \item \hilight{Validated muon reconstruction software} with systematic comparisons, uncovering faults
   \item Commissioning of 40 large muon detectors, which involved
     \begin{itemize}
-    \item leading a team of five students to complete assembly and testing,
+    \item \hilight{leading a team of five students} to complete assembly and testing,
       % leak checking, commissioning with cosmic rays, and working out repairs on the fly
-    \item managing logistics of the lab space when our supervisor was away, and
+    \item \hilight{managing logistics} of the lab space when our supervisor was away, and
     \item training to operate cranes and becoming an expert in the gas mixing and distribution system.
     \end{itemize}
   \end{itemize}
 }
 \cventry{1994--1999}{Research Assistant}{Space Sciences, Geophysics}{Univ. of Washington}{Seattle}{
   \begin{itemize}
-  \item{Built software testing platforms for DAQ hardware used on balloon and satellite experiments}
-  \item{Simulated coded aperture imaging used at X-ray wavelengths (where lenses are not possible)}
+  \item{Built \hilight{software testing platforms} for DAQ hardware used on balloon and satellite experiments}
+  \item{\hilight{Simulated coded aperture imaging} used at X-ray wavelengths (where lenses are not possible)}
   \end{itemize}
 }
 
