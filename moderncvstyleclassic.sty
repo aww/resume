@@ -55,7 +55,7 @@
 \renewcommand*{\quotefont}{\large\slshape}
 \renewcommand*{\sectionfont}{\Large\mdseries\upshape}
 \renewcommand*{\subsectionfont}{\large\mdseries\upshape}
-\renewcommand*{\hintfont}{}
+\renewcommand*{\hintfont}{\scshape}
 
 % styles
 \renewcommand*{\namestyle}[1]{{\namefont\textcolor{color0}{#1}}}
@@ -198,7 +198,7 @@
     {\listitemsymbol\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#3\end{minipage}}}}
 
 \renewcommand*{\cventry}[7][.25em]{%
-  \cvitem[#1]{#2}{%
+  \cvitem[#1]{\hintstyle{#2}}{%
     {\bfseries#3}%
     \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
     \ifthenelse{\equal{#5}{}}{}{, #5}%
