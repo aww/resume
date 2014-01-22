@@ -4,7 +4,7 @@
 \moderncvcolor{blue}
 
 \usepackage[utf8]{inputenc}
-\usepackage[scale=0.87]{geometry}
+\usepackage[scale=0.87, top=.35in, bottom=.35in, left=.35in, right=.35in]{geometry}
 
 % For some reason the {\color{color1} #1} version of this
 % leads to space before a list that starts with \hilight
@@ -12,12 +12,11 @@
 
 \firstname{Alan}
 \familyname{WILSON}
-\title{Ph.D., experimental high energy physics}
-\address{310 Rue des Hautains de la Crotte}{01210 Ornex}{France}
-\mobile{+41 76 487 4147}
-\phone{+1 734 239-3309}
+%\address{1375 Civic Center Dr}{Santa Clara 95050}{}
+\mobile{(408) 242-5090}
 \email{alan.w.wilson@gmail.com}
-\homepage{http://cern.ch/wilsona}
+\homepage{http://thingsstufftimes.com \hfill{} @thingstimes}
+\extrainfo{linkedin.com/pub/alan-wilson/61/91/126/}
 
 %\nopagenumbers{}
 
@@ -26,13 +25,13 @@
 
 \makecvtitle
 
-\section{The basics}
-\cvitem{}{As a physicist and a curious human,
-  everyday I collaborate with colleagues to identify and understand structure in data
-  and communicate our findings widely.}
+%\section{The basics}
+%\cvitem{}{As a curious human,
+%  I collaborate with colleagues to identify and understand structure in data
+%  and communicate our findings clearly.}
 
 \section{Education}
-\cventry{2011}{Ph.D. Physics}{University of Michigan}{Ann Arbor}{}{}
+\cventry{2011}{Ph.D. Experimental Particle Physics}{University of Michigan}{Ann Arbor}{}{}
 \cventry{2003}{M.S. Mathematics}{University of Michigan}{Ann Arbor}{}{}
 \cventry{1999}{B.S. Computer Engineering}{University of Washington}{Seattle}{}{}
 \cventry{1999}{B.S. Mathematical Sciences}{University of Washington}{Seattle}{}{}
@@ -41,128 +40,95 @@
 \section{Proficiencies \& technical interests}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{cvcolumns}{programming}
+\begin{cvcolumns}{}
   \cvcolumn{Almost every day}{
     \begin{itemize}
-    \item C++
-    \item Python
-    \item ROOT+RooStats+TMVA
+    \item Python, C++
+    \item git, svn, etc.
     \item numpy+scipy+matplotlib
+    \item iPython notebook
+    \item Standard linux tools, VMs 
+    \item PowerPoint, wiki docs, etc.
   \end{itemize}
   }
   \cvcolumn{Occasionally}{
     \begin{itemize}
     \item SQL variants
-    \item Mathematica and Matlab
-    \item shell scripting
-    \item C \& ASM for $\mu$-controllers
+    \item Statistical modeling
+    \item Machine learning (decision trees)
+    \item AWS, cluster/Grid computing
+    \item Shell scripting
+%    \item Powerpoint, Illustrator, HTML, etc.
     \end{itemize}
   }
-  \cvcolumn{Dabble in or dated}{
+  \cvcolumn{Dabble in}{
     \begin{itemize}
-    \item Javascript
+    \item Javascript, Perl
+    \item Mathematica and Matlab
     \item Lisp dialects
-    \item PHP
-    \item Perl
+    \item (Social) network analysis
+    \item Coding/compression theory
     \end{itemize}
   }
 \end{cvcolumns}
-
-\cvitemwithcomment{command line}{git/svn, tmux/screen, emacs, ssh/rsync, etc.}{...the usual Linux/dev. stuff}
-\cvitemwithcomment{statistics}{fitting, using likelihoods, Bayesian vs. frequentist, etc.}{...for quantifying level of knowledge}
-\cvitemwithcomment{\footnotesize machine learning}{supervised learning, boosted decision trees (BDTs)}{...including a paper on BDTs and weights}
-\cvitemwithcomment{publishing}{\small \LaTeX, PowerPoint, HTML/CSS, Photoshop, Illustrator, etc.}{...with the goal to communicate effectively}
-\cvitemwithcomment{\small extra projects}{network structures, coding theory, compression}{...in a variety of graduate courses}
-\cvitemwithcomment{indep. study}{Andrew Ng's machine learning course, Bill Howe's data science course, etc.}{...on Coursera}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\section{Experience}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Experience}
-\cventry{2011--present}{Post Doctoral Research Fellow}{ATLAS Experiment}{}{Geneva, Switzerland}{
-  As part of the largest experiment in the world, I contributed to
-  the Higgs discovery (specifically, via $H\rightarrow ZZ \rightarrow 4\ell$) and
-  to measurements involving multiple leptons, including the rare decay $Z\rightarrow 4\ell$.
+\cventry{2014--present}{Fellow at Insight Data Science}{}{}{Mountain View, CA}{
   \begin{itemize}
-  \item \hilight{Wrote readable, modular, and accurate code} to run in batch (Condor) and on the Grid
-    to analyze \hilight{large amounts of data}
-  %\item Mentored graduate students
-  \item Developed many \hilight{tools for efficiently specifying, building, and sharing plots}
-  \item \hilight{Primary editor} for at least one paper as well as internal documents
-  \item Developed a \hilight{framework for defining unit tests} of numerical quantities in \LaTeX{} documents
-  \item Constructed event visualizations in various forms
-  \item Tested new detectors as part of a hardware installation team
-  \item \hilight{Controlled experiment-wide data acquisition}, reacting quickly but thoughtfully to solve faults.
+  \item Developed web app ELI5orPhD which recommends alternative news articles at a different sophistication levels.
+  \item Scraped Google News, news sources with scrapy, BeatifulSoup, and goose for article content. 
+  \item Using nltk to tokenize articles, cluster, and ranking by sophisitication measures such as reading level.
   \end{itemize}
 }
-\cventry{2009--2010}{Graduate Student Research Assistant}{D\O\ Experiment}{}{Batavia, Illinois}{
+\cventry{2011--2013}{Post Doctoral Research Fellow}{ATLAS Experiment}{}{Geneva, Switzerland}{
+  Discovered the Higgs boson, part of the largest scientific \hilight{collaboration} in the world.
   \begin{itemize}
-  \item \textcolor{color1}{Thesis topic}: a search for new physics via the $Z(\rightarrow\ell\ell) \gamma$+missing $E_T$ final state.\\
-    This is a niche topic allowing me to contribute to nearly the \hilight{complete analysis}, including
+  \item Analyzed and quantified discrepencies from expectation in data using Monte Carlo simulation and side-band data  
+  \item \hilight{Wrote readable, modular, and accurate code} to run in batch (Condor) and on the world-wide Grid
+    to analyze \hilight{terabytes of data}
+  \item \hilight{Developed framework} for efficiently specifying, building, and sharing plots
+    and another for defining \hilight{unit tests} of numerical quantities in (\LaTeX{}) documents
+  %\item Constructed event visualizations in various forms
+  \item Controlled experiment-wide data acquisition, involving \hilight{reacting quickly and communicating problems efficiently}.
+  \item \hilight{Mentored} graduate students and was the hilight{primary editor} for papers and internal documents.
+  \end{itemize}
+}
+\cventry{2005--2010}{Graduate Student Research Assistant}{ATLAS \& D\O\ Experiments}{}{Michigan \& Illinois}{
+  \begin{itemize}
+  \item \textcolor{color1}{Thesis topic}: a search for new physics via the $Z(\rightarrow\ell\ell) \gamma$+missing $E_T$ final state.
     \begin{itemize}
-    \item exploring the theory and experimental sensitivity with simulation,
-    \item rejecting backgrounds with BDTs and estimating with data-driven methods, and
-    \item using statistics to quantify constraints on theory imposed by the observation.
+    \item A complete analysis starting with theory and eventually constraining that theory with data.
+    \item Applied machine learning, specificially \hilight{boosted decision trees}, for identifying signal cleanly and efficiently.
+    \item Used statistics to quantify constraints on theory imposed by the observation.
     \end{itemize}
   \item \hilight{Expert role managing Monte Carlo simulation jobs}: responding to my colleagues' requests
     and translating them into tested job specifications, submitting the jobs, and monitoring the results. 
-  \item DAQ shifts: online control, monitoring, and problem solving for the data taking of a large experiment
-  \end{itemize}
-}
-\cventry{2005--2008}{Graduate Student Research Assistant}{ATLAS Experiment}{Univ. of Michigan}{Ann Arbor}{
-  \begin{itemize}
-  \item \hilight{Primary contributor to large public documents} on diboson physics sensitivity before data was available.
+  \item On-line control, monitoring, and problem solving for the data taking of a large experiment
+  \item \hilight{Primary contributor} to large, public documents quantifying experimental sensitivity to new physics.
   \item Implemented tools for calculating confidence regions via \hilight{marginalized likelihoods}.
-  \item Collaborating with an engineer and supervising a student,
-    \hilight{constructed the gas monitor chamber} for the muon tracking system of ATLAS.
-  \item Applied \hilight{boosted decision trees} to particle identification tasks (electron id. and b-tagging),
-    becoming a local expert on the ATLAS software framework
+  \item Collaborated with engineers, technicians, and many other physicists on hardware and analysis projects.
   \end{itemize}
 }
 \cventry{2004--2005}{Research Assistant}{ATLAS Experiment}{Univ. of Michigan}{Geneva, Switzerland}{
   \begin{itemize}
-  \item \hilight{Validated muon reconstruction software} with systematic comparisons, uncovering faults
-  \item Commissioning of 40 large muon detectors, which involved
-    \begin{itemize}
-    \item \hilight{leading a team of five students} to complete assembly and testing,
-      % leak checking, commissioning with cosmic rays, and working out repairs on the fly
-    \item \hilight{managing logistics} of the lab space when our supervisor was away, and
-    \item training to operate cranes and becoming an expert in the gas mixing and distribution system.
-    \end{itemize}
+  \item \hilight{Validated} muon reconstruction software with systematic comparisons, \hilight{uncovering bugs} and reporting on them.
+  \item \hilight{leading a team} of five students to complete assembly and testing of large detector components.
   \end{itemize}
 }
-\cventry{1994--1999}{Research Assistant}{Space Sciences, Geophysics}{Univ. of Washington}{Seattle}{
-  \begin{itemize}
-  \item{Built \hilight{software testing platforms} for DAQ hardware used on balloon and satellite experiments}
-  \item{\hilight{Simulated coded aperture imaging} used at X-ray wavelengths (where lenses are not possible)}
-  \end{itemize}
-}
+%% \cventry{1994--1999}{Research Assistant}{Space Sciences, Geophysics}{Univ. of Washington}{Seattle}{
+%%   \begin{itemize}
+%%   \item{Built \hilight{software testing platforms} for DAQ hardware used on balloon and satellite experiments}
+%%   \item{\hilight{Simulated coded aperture imaging} used at X-ray wavelengths (where lenses are not possible)}
+%%   \end{itemize}
+%% }
 
-\section{Teaching}
-\cventry{1999--2003}{Graduate Student Instructor}{Mathematics}{University of Michigan}{Ann Arbor}{Courses: precalculus, calculus I \& II, and differential equations}
-\cventry{1998--1999}{Teaching Assistant}{Computer Science and Engineering}{Univ. of Washington}{Seattle}{Courses: Discrete Structures, Introduction to Computer Graphics, and Digital System Design}
+%% \section{Other interests}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Publications}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-{\footnotesize
-\cvline{note}{\href{https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2013-055/}{``ATLAS measurements of the 7 and 8 TeV cross sections for $Z\rightarrow 4\ell$ in pp collisions'', May 2013. ATLAS-CONF-2013-055}}
-\cvline{paper}{\href{http://dx.doi.org/10.1016/j.physletb.2012.08.020}{``Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC'', Phys. Lett. B 716 (2012) 1-29}}
-\cvline{paper}{\href{http://link.aps.org/doi/10.1103/PhysRevD.86.071701}{``Search for $Z\gamma$ events with large missing transverse energy in $p\bar{p}$ collisions at $\sqrt{s}=1.96$~TeV'', Phys. Rev. D 86, 071701(R) (2012)}}
-\cvline{publication}{\href{http://dx.doi.org/10.1088/1748-0221/3/08/S08003}{``The ATLAS Experiment at the CERN Large Hadron Collider.'' \textit{JINST} 3 S08003 (2008)}}
-\cvline{publication}{\href{http://arxiv.org/abs/0901.0512}{``Expected Performance of the ATLAS Experiment - Detector, Trigger and Physics.'' CERN-OPEN-2008-020 (2009), arXiv:0901.0512}}
-\cvline{paper}{\href{http://dx.doi.org/10.1016/j.nima.2008.01.096}{``Drift time spectrum and gas monitoring in the ATLAS Muon Spectrometer precision chambers.'' Nucl.\ Instrum.\ Methods A \textbf{588}, 347 (2008).}}
-\cvline{paper}{\href{http://dx.doi.org/10.1088/1748-0221/3/04/P04004}{``A Multivariate Training Technique with Event Reweighting.'' H.-J. Yang, T. Dai, A. Wilson, Z. Zhao and B. Zhou, JINST 3:P04004, 2008} }
-\cvline{projects}{See, for instance, \url{http://cern.ch/wilsona/OtherTopics/NetworksSI708}}
-}
-
-\section{Other interests}
-
-\cvitem{hobbies}{electronics, photography -- small analog and microcontroller projects, digital and chemical darkrooms}
-\cvitem{culture}{cooking, travel, hiking, and wandering -- seeing, smelling, touching, and tasting the world}
+%% \cvitem{hobbies}{electronics, photography -- small analog and microcontroller projects, digital and chemical darkrooms}
+%% \cvitem{culture}{cooking, travel, hiking, and wandering -- seeing, smelling, touching, and tasting the world}
 
 \end{document}
