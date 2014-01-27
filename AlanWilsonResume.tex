@@ -15,8 +15,8 @@
 %\address{1375 Civic Center Dr}{Santa Clara 95050}{}
 \mobile{(408) 242-5090}
 \email{alan.w.wilson@gmail.com}
-\homepage{http://thingsstufftimes.com \hfill{} @thingstimes}
-\extrainfo{linkedin.com/pub/alan-wilson/61/91/126/}
+\homepage{http://thingsstufftimes.com}
+\extrainfo{github.com/aww \qquad @thingstimes \\ linkedin.com/pub/alan-wilson/61/91/126/}
 
 %\nopagenumbers{}
 
@@ -24,6 +24,8 @@
 %\renewcommand{\listitemsymbol}{+}
 
 \makecvtitle
+
+\vspace*{-8mm}
 
 %\section{The basics}
 %\cvitem{}{As a curious human,
@@ -34,7 +36,7 @@
 \cventry{2011}{Ph.D. Experimental Particle Physics}{University of Michigan}{Ann Arbor}{}{}
 \cventry{2003}{M.S. Mathematics}{University of Michigan}{Ann Arbor}{}{}
 \cventry{1999}{B.S. Computer Engineering}{University of Washington}{Seattle}{}{}
-\cventry{1999}{B.S. Mathematical Sciences}{University of Washington}{Seattle}{}{}
+\cventry{    }{B.S. Mathematical Sciences}{University of Washington}{Seattle}{(dual degree)}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Proficiencies \& technical interests}
@@ -43,31 +45,31 @@
 \begin{cvcolumns}{}
   \cvcolumn{Almost every day}{
     \begin{itemize}
-    \item Python, C++
+    \item Python, C++, cint, ROOT
     \item git, svn, etc.
     \item numpy+scipy+matplotlib
     \item iPython notebook
-    \item Standard linux tools, VMs 
-    \item PowerPoint, wiki docs, etc.
-  \end{itemize}
+    \item Standard linux tools, VMs
+    \item Cluster and cloud computing
+    \end{itemize}
   }
   \cvcolumn{Occasionally}{
     \begin{itemize}
-    \item SQL variants
+    \item SQLlite and MySQL
     \item Statistical modeling
-    \item Machine learning (decision trees)
-    \item AWS, cluster/Grid computing
-    \item Shell scripting
+    \item ML: boosted decision trees
+    \item AWS, shell scripting
+    \item HTML, CSS, javascript, jQuery 
 %    \item Powerpoint, Illustrator, HTML, etc.
     \end{itemize}
   }
   \cvcolumn{Dabble in}{
     \begin{itemize}
-    \item Javascript, Perl
-    \item Mathematica and Matlab
-    \item Lisp dialects
+    \item D3, nltk, web scraping
+    \item Mathematica, Matlab, Octave
+    \item Perl, Lisp dialects
     \item (Social) network analysis
-    \item Coding/compression theory
+    \item Coding and compression theory
     \end{itemize}
   }
 \end{cvcolumns}
@@ -79,44 +81,50 @@
 \section{Experience}
 \cventry{2014--present}{Fellow at Insight Data Science}{}{}{Mountain View, CA}{
   \begin{itemize}
-  \item Developed web app ELI5orPhD which recommends alternative news articles at a different sophistication levels.
-  \item Scraped Google News, news sources with scrapy, BeatifulSoup, and goose for article content. 
-  \item Using nltk to tokenize articles, cluster, and ranking by sophisitication measures such as reading level.
+  \item Developed web app 'NewsSpectrum' which recommends a spectrum of alternative news articles on a similar topic.
+  \item Scraped and extracted information from Google News and individual sources with scrapy, BeautifulSoup, and goose. 
+  \item Used Python tools nltk and scikit-learn to tokenize, cluster, and rank articles by sophistication.
+  \item Published application using flask, Bootstrap, D3, gunicorn, and supervisor on AWS.
   \end{itemize}
 }
 \cventry{2011--2013}{Post Doctoral Research Fellow}{ATLAS Experiment}{}{Geneva, Switzerland}{
-  Discovered the Higgs boson, part of the largest scientific \hilight{collaboration} in the world.
   \begin{itemize}
-  \item Analyzed and quantified discrepencies from expectation in data using Monte Carlo simulation and side-band data  
-  \item \hilight{Wrote readable, modular, and accurate code} to run in batch (Condor) and on the world-wide Grid
-    to analyze \hilight{terabytes of data}
-  \item \hilight{Developed framework} for efficiently specifying, building, and sharing plots
-    and another for defining \hilight{unit tests} of numerical quantities in (\LaTeX{}) documents
+  \item Filtered massive datasets (> 1 TB) down to a few important records using world-wide and local batch computing
+    for the discovery of the Higgs boson.
+  \item Built C++ applications (such as for the filtering above) on top of the shared tools of a collaboration of 2000 scientists.
+  \item Developed a framework in Python and ROOT for efficiently specifying, building, and publishing plots to the web.
+  \item Used JSON/YAML+Python to organize and run unit tests on numbers
+    appearing in \LaTeX{} documents.
   %\item Constructed event visualizations in various forms
-  \item Controlled experiment-wide data acquisition, involving \hilight{reacting quickly and communicating problems efficiently}.
-  \item \hilight{Mentored} graduate students and was the hilight{primary editor} for papers and internal documents.
+  \item Controlled and monitored data acquisition, requiring quick reactions and efficient communication with colleagues.
+  \item Mentored graduate students, and was the primary editor for many documents including published papers.
   \end{itemize}
 }
 \cventry{2005--2010}{Graduate Student Research Assistant}{ATLAS \& D\O\ Experiments}{}{Michigan \& Illinois}{
   \begin{itemize}
-  \item \textcolor{color1}{Thesis topic}: a search for new physics via the $Z(\rightarrow\ell\ell) \gamma$+missing $E_T$ final state.
-    \begin{itemize}
-    \item A complete analysis starting with theory and eventually constraining that theory with data.
-    \item Applied machine learning, specificially \hilight{boosted decision trees}, for identifying signal cleanly and efficiently.
-    \item Used statistics to quantify constraints on theory imposed by the observation.
-    \end{itemize}
-  \item \hilight{Expert role managing Monte Carlo simulation jobs}: responding to my colleagues' requests
-    and translating them into tested job specifications, submitting the jobs, and monitoring the results. 
-  \item On-line control, monitoring, and problem solving for the data taking of a large experiment
-  \item \hilight{Primary contributor} to large, public documents quantifying experimental sensitivity to new physics.
-  \item Implemented tools for calculating confidence regions via \hilight{marginalized likelihoods}.
+  \item Used Monte Carlo simulation and data-driven methods to build statistical models of expected observations.
+  \item Separated signal from background using boosted decision trees.
+  \item Computed 95\% confidence intervals for new physical parameters using likelihoods built from data and
+    statistical models of signal and background (with many nuisance parameters quantifying uncertainty).
+  \item Managed Monte Carlo simulation by translating colleagues' informal requests into formal job specifications,
+    testing and submitting the jobs, and monitoring the results; built tools in Python to streamline all of these steps. 
+  \item Important contributor to large, public documents describing the experiment's sensitivity to new physics.
   \item Collaborated with engineers, technicians, and many other physicists on hardware and analysis projects.
   \end{itemize}
 }
 \cventry{2004--2005}{Research Assistant}{ATLAS Experiment}{Univ. of Michigan}{Geneva, Switzerland}{
   \begin{itemize}
-  \item \hilight{Validated} muon reconstruction software with systematic comparisons, \hilight{uncovering bugs} and reporting on them.
-  \item \hilight{leading a team} of five students to complete assembly and testing of large detector components.
+  \item Validated software by broadly and systematically comparing alternative systems for unexpected discrepancies,
+    found and reported on important bugs.
+  \item Lead a team of five students to complete assembly and testing of large detector components.
+  \end{itemize}
+}
+\cventry{1999--2004}{Misc. Teaching}{}{}{}{
+  \begin{itemize}
+  \item Univ. of Washington CSE Dept.:
+    assisted with Discrete Math, Computer Graphics, and Digital Design.
+  \item Univ. of Michigan Math Dept.:
+    taught Precalculus, Calculus I and Calculus II, and assisted with Differential Equations.
   \end{itemize}
 }
 %% \cventry{1994--1999}{Research Assistant}{Space Sciences, Geophysics}{Univ. of Washington}{Seattle}{
