@@ -16,7 +16,7 @@
 \mobile{(408) 242-5090}
 \email{alan.w.wilson@gmail.com}
 \homepage{http://thingsstufftimes.com}
-\extrainfo{github.com/aww \qquad @thingstimes \\ linkedin.com/pub/alan-wilson/61/91/126/}
+\extrainfo{github.com/aww \\ linkedin.com/pub/alan-wilson/61/91/126/}
 
 %\nopagenumbers{}
 
@@ -33,10 +33,9 @@
 %  and communicate our findings clearly.}
 
 \section{Education}
-\cventry{2011}{Ph.D. Experimental Particle Physics}{University of Michigan}{Ann Arbor}{}{}
+\cventry{2011}{Ph.D. (Experimental Particle) Physics}{University of Michigan}{Ann Arbor}{}{}
 \cventry{2003}{M.S. Mathematics}{University of Michigan}{Ann Arbor}{}{}
-\cventry{1999}{B.S. Computer Engineering}{University of Washington}{Seattle}{}{}
-\cventry{    }{B.S. Mathematical Sciences}{University of Washington}{Seattle}{(dual degree)}{}
+\cventry{1999}{B.S. Computer Engineering \& Mathematical Sciences (dual degree)}{University of Washington}{Seattle}{}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Proficiencies \& technical interests}
@@ -45,27 +44,27 @@
 \begin{cvcolumns}{}
   \cvcolumn{Almost every day}{
     \begin{itemize}
-    \item Python, C++, cint, ROOT
+    \item Python, C++, ROOT, cint
     \item git, svn, etc.
     \item numpy+scipy+matplotlib
     \item iPython notebook
-    \item Standard linux tools, VMs
+    \item Standard linux tools, \LaTeX{}, VMs
     \item Cluster and cloud computing
     \end{itemize}
   }
   \cvcolumn{Occasionally}{
     \begin{itemize}
-    \item SQLlite and MySQL
+    \item SQLlite and MySQL, AWS
     \item Statistical modeling
-    \item ML: boosted decision trees
-    \item AWS, shell scripting
+    \item Machine learning, boosted decision trees
+    \item Linux admin., shell scripting
     \item HTML, CSS, javascript, jQuery 
 %    \item Powerpoint, Illustrator, HTML, etc.
     \end{itemize}
   }
   \cvcolumn{Dabble in}{
     \begin{itemize}
-    \item D3, nltk, web scraping
+    \item D3, nltk, web scraping, Hadoop
     \item Mathematica, Matlab, Octave
     \item Perl, Lisp dialects
     \item (Social) network analysis
@@ -81,50 +80,50 @@
 \section{Experience}
 \cventry{2014--present}{Fellow at Insight Data Science}{}{}{Mountain View, CA}{
   \begin{itemize}
-  \item Developed web app 'NewsSpectrum' which recommends a spectrum of alternative news articles on a similar topic.
+  \item Developed the web app \href{http://NewsSpectra.com}{NewsSpectra.com} which presents alternative coverage of a topic
+      on a spectrum of readability.
   \item Scraped and extracted information from Google News and individual sources with scrapy, BeautifulSoup, and goose. 
-  \item Used Python tools nltk and scikit-learn to tokenize, cluster, and rank articles by sophistication.
-  \item Published application using flask, Bootstrap, D3, gunicorn, and supervisor on AWS.
+  \item Used Python tools nltk and scikit-learn to tokenize, cluster, and rank articles by Flesch-Kincaid reading level.
+  \item Published application using AWS, MySQL, gunicorn, supervisor, Bootstrap, and D3.
   \end{itemize}
 }
 \cventry{2011--2013}{Post Doctoral Research Fellow}{ATLAS Experiment}{}{Geneva, Switzerland}{
   \begin{itemize}
-  \item Filtered massive datasets (> 1 TB) down to a few important records using world-wide and local batch computing
-    for the discovery of the Higgs boson.
-  \item Built C++ applications (such as for the filtering above) on top of the shared tools of a collaboration of 2000 scientists.
-  \item Developed a framework in Python and ROOT for efficiently specifying, building, and publishing plots to the web.
-  \item Used JSON/YAML+Python to organize and run unit tests on numbers
-    appearing in \LaTeX{} documents.
+  \item Filtered massive datasets (> 1 TB) to find very rare signals using local and world-wide batch computing,
+    contributing to the discovery of the Higgs boson.
+  \item Built C++ applications on top of the shared tools of a collaboration of 2000 scientists to calibrate, resolve ambiguities, and filter data.
+  \item Developed a framework in Python and ROOT for specifying, building, and publishing plots to the web.
+  \item Applied unit tests to publications by factoring out numerical quantities in JSON/YAML+Python.
   %\item Constructed event visualizations in various forms
   \item Controlled and monitored data acquisition, requiring quick reactions and efficient communication with colleagues.
-  \item Mentored graduate students, and was the primary editor for many documents including published papers.
+  %\item Mentored graduate students, and was the primary editor for many documents including published papers.
   \end{itemize}
 }
 \cventry{2005--2010}{Graduate Student Research Assistant}{ATLAS \& D\O\ Experiments}{}{Michigan \& Illinois}{
   \begin{itemize}
-  \item Used Monte Carlo simulation and data-driven methods to build statistical models of expected observations.
-  \item Separated signal from background using boosted decision trees.
+  \item Used a large stack of Monte Carlo simulations (from particle production to detector response),
+    as well as extrapolations from data, to quantify signal and background.
+  \item Increased signal to background separation in selection and identification problems using boosted decision trees.
   \item Computed 95\% confidence intervals for new physical parameters using likelihoods built from data and
     statistical models of signal and background (with many nuisance parameters quantifying uncertainty).
-  \item Managed Monte Carlo simulation by translating colleagues' informal requests into formal job specifications,
+  \item Managed Monte Carlo simulations by translating colleagues' informal requests into formal job specifications,
     testing and submitting the jobs, and monitoring the results; built tools in Python to streamline all of these steps. 
-  \item Important contributor to large, public documents describing the experiment's sensitivity to new physics.
-  \item Collaborated with engineers, technicians, and many other physicists on hardware and analysis projects.
+  \item Contributed 100+ pages to documents describing the experiment's sensitivity to new physics.
   \end{itemize}
 }
 \cventry{2004--2005}{Research Assistant}{ATLAS Experiment}{Univ. of Michigan}{Geneva, Switzerland}{
   \begin{itemize}
-  \item Validated software by broadly and systematically comparing alternative systems for unexpected discrepancies,
+  \item Validated software by broadly and systematically comparing alternative systems for unexpected discrepancies;
     found and reported on important bugs.
   \item Lead a team of five students to complete assembly and testing of large detector components.
   \end{itemize}
 }
 \cventry{1999--2004}{Misc. Teaching}{}{}{}{
   \begin{itemize}
-  \item Univ. of Washington CSE Dept.:
-    assisted with Discrete Math, Computer Graphics, and Digital Design.
   \item Univ. of Michigan Math Dept.:
     taught Precalculus, Calculus I and Calculus II, and assisted with Differential Equations.
+  \item Univ. of Washington CSE Dept.:
+    assisted with Discrete Math, Computer Graphics, and Digital Design.
   \end{itemize}
 }
 %% \cventry{1994--1999}{Research Assistant}{Space Sciences, Geophysics}{Univ. of Washington}{Seattle}{
