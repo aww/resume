@@ -5,6 +5,9 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[scale=0.87, top=.35in, bottom=.35in, left=.35in, right=.35in]{geometry}
+% \usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\input{glyphtounicode}
 
 % For some reason the {\color{color1} #1} version of this
 % leads to space before a list that starts with \hilight
@@ -15,8 +18,8 @@
 %\address{1375 Civic Center Dr}{Santa Clara 95050}{}
 \mobile{(408) 242-5090}
 \email{alan.w.wilson@gmail.com}
-\homepage{http://thingsstufftimes.com}
-\extrainfo{github.com/aww \\ linkedin.com/pub/alan-wilson/61/91/126/}
+%\homepage{http://thingsstufftimes.com}
+\extrainfo{\url{https://github.com/aww} \\ \url{https://www.linkedin.com/in/alanwwilson/}}
 
 %\nopagenumbers{}
 
@@ -32,65 +35,57 @@
 %  I collaborate with colleagues to identify and understand structure in data
 %  and communicate our findings clearly.}
 
-\section{Education}
-\cventry{2011}{Ph.D. (Experimental Particle) Physics}{University of Michigan}{Ann Arbor}{}{}
-\cventry{2003}{M.S. Mathematics}{University of Michigan}{Ann Arbor}{}{}
-\cventry{1999}{B.S. Computer Engineering \& Mathematical Sciences (dual degree)}{University of Washington}{Seattle}{}{}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Proficiencies \& technical interests}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{cvcolumns}{}
-  \cvcolumn{Almost every day}{
-    \begin{itemize}
-    \item Python, C++, ROOT, cint
-    \item git, svn, etc.
-    \item numpy+scipy+matplotlib
-    \item iPython notebook
-    \item Standard linux tools, \LaTeX{}, VMs
-    \item Cluster and cloud computing
-    \end{itemize}
-  }
-  \cvcolumn{Occasionally}{
-    \begin{itemize}
-    \item SQLlite and MySQL, AWS
-    \item Statistical modeling
-    \item Machine learning, boosted decision trees
-    \item Linux admin., shell scripting
-    \item HTML, CSS, javascript, jQuery 
-%    \item Powerpoint, Illustrator, HTML, etc.
-    \end{itemize}
-  }
-  \cvcolumn{Dabble in}{
-    \begin{itemize}
-    \item D3, nltk, web scraping, Hadoop
-    \item Mathematica, Matlab, Octave
-    \item Perl, Lisp dialects
-    \item (Social) network analysis
-    \item Coding and compression theory
-    \end{itemize}
-  }
-\end{cvcolumns}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\section{Experience}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Experience}
-\cventry{2014--present}{Fellow at Insight Data Science}{}{}{Mountain View, CA}{
+
+\cventry{2018--2023}{Lead Machine Learning Engineer}{Glassdoor}{}{San Francisco, CA / Remote}{
   \begin{itemize}
-  \item Developed the web app \href{http://NewsSpectra.com}{NewsSpectra.com} which presents alternative coverage of a topic
-      on a spectrum of readability.
-  \item Scraped and extracted information from Google News and individual sources with scrapy, BeautifulSoup, and goose. 
-  \item Used Python tools nltk and scikit-learn to tokenize, cluster, and rank articles by Flesch-Kincaid reading level.
-  \item Published application using AWS, MySQL, gunicorn, supervisor, Bootstrap, and D3.
+  \item Modernized pay estimation with deep learning and organized builds with DVC
+  \item Built and maintained a bespoke model for optimal pricing in the jobs marketplace
+  \item Introduced structured model testing
+  \item Built machine learning training and outreach for engineers and product managers
   \end{itemize}
 }
+
+\cventry{2015--2018}{Senior Data Scientist}{Glassdoor}{}{San Francisco, CA}{
+  \begin{itemize}
+  \item Improved bot monitoring and flagging algorithms
+  \item Built a job ad and direct response marketing demand forecasting system
+  \item Built budget sizing and optimal pricing tools for job ad sales
+  \item Ran an ecletic mix of small projects involving data processing and model building in offline python notebooks, hive, and some spark
+  \item A/B testing platform development and maintainace (custom, in-house system):
+    \begin{itemize}
+    \item built out new statisical components and added a completely new and much-refined UI
+    \end{itemize}
+  \item Contributed many engagement and valuation insights around B2B products, CLV of marketing efforts, and user job search engagement
+  \end{itemize}
+}
+
+\cventry{2014--2015}{Data Scientist}{Glassdoor}{}{San Francisco, CA}{
+  \begin{itemize}
+  \item Brought to production core ML/data products at Glassdoor: \textbf{categorizing jobs}, and \textbf{salary prediction}
+    \begin{enumerate}
+    \item End-to-end, from research and data exploration to model building and human testing to optimization for production.
+    \end{enumerate}
+  \item Early adopter of Tableau, company expert, author of a few very high-demand dashboards.
+  \end{itemize}
+}
+
+\cventry{2014}{Fellow}{Insight Data Science}{}{Mountain View, CA}{
+  \begin{itemize}
+  \item Developed the web app \href{http://NewsSpectra.com}{NewsSpectra.com}
+    which presents alternative news coverage of a topic on a spectrum of readability \& detail.
+  \item Full stack web dev. from Web scraping, NLP processing, and web app deployment with MySQL, AWS, Bootstrap, D3, etc.
+  \end{itemize}
+}
+
 \cventry{2011--2013}{Post Doctoral Research Fellow}{ATLAS Experiment}{}{Geneva, Switzerland}{
   \begin{itemize}
+  \item Contributing to supersymmetry searches and the discovery of the Higgs boson
   \item Filtered massive datasets (> 1 TB) to find very rare signals using local and world-wide batch computing,
-    contributing to the discovery of the Higgs boson.
   \item Built C++ applications on top of the shared tools of a collaboration of 2000 scientists to calibrate, resolve ambiguities, and filter data.
   \item Developed a framework in Python and ROOT for specifying, building, and publishing plots to the web.
   \item Applied unit tests to publications by factoring out numerical quantities in JSON/YAML+Python.
@@ -118,24 +113,55 @@
   \item Led a team of five students to complete assembly and testing of large detector components.
   \end{itemize}
 }
-\cventry{1999--2004}{Misc. Teaching}{}{}{}{
+\cventry{1994--2004}{Misc. research and teaching}{U. of Washington \& U. of Michigan}{}{Seattle \& Ann Arbor}{
   \begin{itemize}
-  \item Univ. of Michigan Math Dept.:
-    taught Precalculus, Calculus I and Calculus II, and assisted with Differential Equations.
-  \item Univ. of Washington CSE Dept.:
-    assisted with Discrete Math, Computer Graphics, and Digital Design.
+  \item Taught Calculus I \& II, Differential Equations, etc. at the University of Michigan
+  \item Teaching assistant for Discrete Math, Computer Graphics, and Digital Design at the University of Washington
+  \item Developed software simulating X-ray imaging systems and for testing balloon and satellite experimental hardware in Geophysics at the U. of Washington
   \end{itemize}
 }
-%% \cventry{1994--1999}{Research Assistant}{Space Sciences, Geophysics}{Univ. of Washington}{Seattle}{
-%%   \begin{itemize}
-%%   \item{Built \hilight{software testing platforms} for DAQ hardware used on balloon and satellite experiments}
-%%   \item{\hilight{Simulated coded aperture imaging} used at X-ray wavelengths (where lenses are not possible)}
-%%   \end{itemize}
-%% }
 
-%% \section{Other interests}
 
-%% \cvitem{hobbies}{electronics, photography -- small analog and microcontroller projects, digital and chemical darkrooms}
-%% \cvitem{culture}{cooking, travel, hiking, and wandering -- seeing, smelling, touching, and tasting the world}
+\section{Education}
+\cventry{2011}{Ph.D. Physics (experimental, high energy)}{University of Michigan}{Ann Arbor}{}{}
+\cventry{2003}{M.S. Mathematics}{University of Michigan}{Ann Arbor}{}{}
+\cventry{1999}{B.S. Computer Engineering \& Mathematical Sciences (dual degree)}{University of Washington}{Seattle}{}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Proficiencies \& technical interests}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{cvcolumns}{}
+  \cvcolumn{Almost every day}{
+    \begin{itemize}
+    \item Python, iPython \& notebooks
+    \item SQL (mostly for SQL Server, Hive, Presto, and SQLite)
+    \item git, standard Linux/Unix tools (shell scripting, sed, emacs/vi, etc.)
+    \item basic cloud computing (mostly AWS)
+    \item numpy, scipy, matplotlib
+    \item pytorch, tensorflow
+    \item iPython notebook
+    \end{itemize}
+  }
+  \cvcolumn{Occasionally}{
+    \begin{itemize}
+    \item Airflow / Kubernettes
+    \item MLFlow / DVC
+    \item Statistical modeling
+    \item A wide breadth of ML modeling techniques
+    \end{itemize}
+  }
+  \cvcolumn{Dabble in}{
+    \begin{itemize}
+    \item Hardware, IoT
+    \item HTML, CSS, javascript, jQuery, web app deployment
+    \item Web scraping
+    \item Mathematica, Matlab, Octave
+    \item Perl, Lisp dialects
+    \item (Social) network analysis
+    \item Coding and compression theory
+    \end{itemize}
+  }
+\end{cvcolumns}
 
 \end{document}
